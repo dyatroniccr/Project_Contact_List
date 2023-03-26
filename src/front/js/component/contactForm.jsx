@@ -45,19 +45,12 @@ const ContactForm = () => {
             <button type="button" className="col-md-8 btn btn-primary">
               save
             </button>
-            <br />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+            <br />
             <Link to="/">
               <span>or get back to contacts</span>
             </Link>
           </form>
         </div>
-
-        <form className="row g-3">
-          <div className="col-md-6"></div>
-          <div className="col-md-6"></div>
-          <div className="col-12"></div>
-          <div className="col-md-6"></div>
-        </form>
       </div>
     </div>
   );
