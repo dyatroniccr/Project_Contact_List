@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 //Components
 
@@ -10,7 +10,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1"><AiOutlineHome /></span>
+					<span className="navbar-brand mb-0 h1"><FaHome /></span>
 				</Link>				
 				<div className="ml-auto">
 					<Link to="/contactForm">
