@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Styles
+import "../../styles/contactForm.css";
+
 const ContactForm = () => {
   return (
     <div className="container-fluid bg bg-dark">
-      <div className="container bg bg-white">
+      <div className="contactForm container bg bg-white">
         <div className="d-flex justify-content-center">
-          <h1>Add a new contact</h1>
+          <h1 className="fs-1 fw-bold mt-5">Add a new contact</h1>
         </div>
-        <div>
+        <div className="form-control border border-0 ps-4 pe-4">
           <form>
             <label htmlFor="full-name" className="form-label fs-5">
               Full Name
@@ -42,12 +45,15 @@ const ContactForm = () => {
               className="form-control mb-4"
               placeholder="Enter address"
             />
-            <button type="button" className="col-md-8 btn btn-primary">
+            <button
+              type="button"
+              className="button col-md-8 btn btn-primary fs-6 fw-bold"
+            >
               save
             </button>
             <br />
             <Link to="/">
-              <span>or get back to contacts</span>
+              <span className="fs-5">or get back to contacts</span>
             </Link>
           </form>
         </div>
