@@ -11,7 +11,7 @@ export const Navbar = () => {
 			<div className="container">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1"><AiOutlineHome /></span>
-				</Link>,
+				</Link>				
 				<div className="ml-auto">
 					<Link to="/contactForm">
 						<button className="btn btn-primary">Add new Contact</button>
