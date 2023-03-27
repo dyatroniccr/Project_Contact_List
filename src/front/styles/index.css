@@ -1,3 +1,31 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+body{
+    background-color: gray;
+}
+
+.principal {
+    padding-bottom: 100%;
+}
+.button-new-contact {
+    background-color: rgb(17, 172, 17);    
+}
+
+.form-control input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.contactForm {
+    padding-bottom: 200px;
+}
+
+.button-save {
+    display: flex;
+    justify-content: center;     
+}
+
+/*#contactRow {
+    margin-right: 5px;
+}*/

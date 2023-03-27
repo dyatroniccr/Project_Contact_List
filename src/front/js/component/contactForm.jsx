@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//import { addNewContact } from "contact.jsx";
+
 //Styles
 import "../../styles/contactForm.css";
 
@@ -45,12 +47,15 @@ const ContactForm = () => {
               className="form-control mb-4"
               placeholder="Enter address"
             />
-            <button
-              type="button"
-              className="button col-md-8 btn btn-primary fs-6 fw-bold"
-            >
-              save
-            </button>
+            <div className="d-flex justify-content-center">
+              <button
+                type="button"
+                className="button-save col-md-6 btn btn-primary fs-6 fw-bold"
+              >
+                save
+              </button>
+            </div>
+            
             <br />
             <Link to="/">
               <span className="fs-5">or get back to contacts</span>

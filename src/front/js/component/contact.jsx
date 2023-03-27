@@ -15,29 +15,37 @@ const Contact = () => {
     const addNewContact = () => {
         setContacts([...contacts, {id:contacts.length+1,full_name:"",email:"",phone:"",address:""}]);
     };
+    
+    const editContact = () => {
+        setContacts([{id:contacts.length+1,full_name:"",email:"",phone:"",address:""}])
+    };
+
+    const removeContact = (id) => {
+        setContacts(
+          contacts.filter((item, index) => {
+            return index != id
+          }));
+    };   
 
     return (
         <>
-            <div className="container w-75">
-                <div className="d-flex justify-content-end mt-3 mb-3">
-                    <Link to="/contactForm"><button type="button" className="btn btn-success">Add New Contact</button></Link>
+            <div className="principal container-md bg bg-white pt-4 pb-5">
+                <div className="d-flex justify-content-end mt-3 mb-3 me-4">
+                    <Link to="/contactForm"><button type="button" className="button-new-contact fs-5 fw-bold btn">Add New Contact</button></Link>
                 </div>
-                
-            </div>
 
-            {contacts && contacts.length >0 ? 
-                <div className="container">
-                    {contacts.map((cont,index) => (
-                        <ContactRow key={cont.id} index={index} contact={cont} />
-                    ))}                            
-                </div>
-                :
-                <div className="border ms-2 me-3 ps-5 pb-3 pt-3 d-flex justify-content-between"> 
-                    <h1>No hay Lista de Contactos</h1>
-                </div>
-            } 
-           
-           
+                {contacts && contacts.length >0 ? 
+                    <div className="container">
+                        {contacts.map((cont,index) => (
+                            <ContactRow key={cont.id} index={index} contact={cont} removeContact={removeContact} />
+                        ))}                            
+                    </div>
+                    :
+                    <div className="border ps-5 pb-3 pt-3 d-flex justify-content-center rounded"> 
+                        <h1>No hay Lista de Contactos</h1>
+                    </div>
+                }           
+            </div>
         </>
     );
 };
